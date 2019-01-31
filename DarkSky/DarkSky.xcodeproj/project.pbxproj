@@ -12,6 +12,7 @@
 		F4455BE722024E900078D526 /* DarkSky.h in Headers */ = {isa = PBXBuildFile; fileRef = F4455BD922024E900078D526 /* DarkSky.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4C699E02202A706006A685C /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699DF2202A706006A685C /* Units.swift */; };
 		F4C699E22202A795006A685C /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699E12202A794006A685C /* Language.swift */; };
+		F4C699E42202A84D006A685C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699E32202A84D006A685C /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		F4455BE622024E900078D526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4C699DF2202A706006A685C /* Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		F4C699E12202A794006A685C /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		F4C699E32202A84D006A685C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				F4455BDA22024E900078D526 /* Info.plist */,
 				F4C699DF2202A706006A685C /* Units.swift */,
 				F4C699E12202A794006A685C /* Language.swift */,
+				F4C699E32202A84D006A685C /* Request.swift */,
 			);
 			path = DarkSky;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4C699E02202A706006A685C /* Units.swift in Sources */,
+				F4C699E42202A84D006A685C /* Request.swift in Sources */,
 				F4C699E22202A795006A685C /* Language.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
