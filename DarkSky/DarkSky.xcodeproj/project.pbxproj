@@ -393,6 +393,7 @@
 		F4455BEE22024E900078D526 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DarkSkyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -410,6 +411,7 @@
 		F4455BEF22024E900078D526 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DarkSkyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
