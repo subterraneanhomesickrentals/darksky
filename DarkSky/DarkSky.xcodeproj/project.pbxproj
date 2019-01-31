@@ -148,6 +148,7 @@
 				TargetAttributes = {
 					F4455BD522024E900078D526 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					F4455BDE22024E900078D526 = {
 						CreatedOnToolsVersion = 10.1;
@@ -341,6 +342,7 @@
 		F4455BEB22024E900078D526 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +359,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rentals.subterranean.homesick.DarkSky;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +368,7 @@
 		F4455BEC22024E900078D526 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
