@@ -9,5 +9,5 @@ public struct DataBlock: Codable {
     public let summary: String?
     
     /// A machine-readable text summary of this data block. (May take on the same values as the iconproperty of data points.)
-    public let icon: String?
+    public let icon: Icon?
 }
