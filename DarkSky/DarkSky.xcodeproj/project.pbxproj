@@ -12,6 +12,7 @@
 		F4455BE022024E900078D526 /* DarkSky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4455BD622024E900078D526 /* DarkSky.framework */; };
 		F4455BE522024E900078D526 /* DarkSkyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4455BE422024E900078D526 /* DarkSkyTests.swift */; };
 		F4455BE722024E900078D526 /* DarkSky.h in Headers */ = {isa = PBXBuildFile; fileRef = F4455BD922024E900078D526 /* DarkSky.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4B5958E220408D700879F8C /* Icon+Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5958D220408D700879F8C /* Icon+Emoji.swift */; };
 		F4C699E02202A706006A685C /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699DF2202A706006A685C /* Units.swift */; };
 		F4C699E22202A795006A685C /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699E12202A794006A685C /* Language.swift */; };
 		F4C699E42202A84D006A685C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699E32202A84D006A685C /* Request.swift */; };
@@ -42,6 +43,7 @@
 		F4455BDF22024E900078D526 /* DarkSkyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DarkSkyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4455BE422024E900078D526 /* DarkSkyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSkyTests.swift; sourceTree = "<group>"; };
 		F4455BE622024E900078D526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4B5958D220408D700879F8C /* Icon+Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Icon+Emoji.swift"; sourceTree = "<group>"; };
 		F4C699DF2202A706006A685C /* Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		F4C699E12202A794006A685C /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		F4C699E32202A84D006A685C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				F4C699ED2202BF7F006A685C /* Alert.swift */,
 				F4C699EF2202C002006A685C /* Flags.swift */,
 				4A0D6A292203478F004F6AAA /* Icon.swift */,
+				F4B5958D220408D700879F8C /* Icon+Emoji.swift */,
 			);
 			path = DarkSky;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				F4C699EE2202BF7F006A685C /* Alert.swift in Sources */,
 				4A0D6A2A2203478F004F6AAA /* Icon.swift in Sources */,
 				F4C699EC2202BEB8006A685C /* DataBlock.swift in Sources */,
+				F4B5958E220408D700879F8C /* Icon+Emoji.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
