@@ -3,7 +3,7 @@ extension Request {
     
     /// The fully formed request URL, including the HTTP query string.
     public var url: URL? {
-        var components = URLComponents(string: "https://api.darksky.net/forecast/\(key)/\(latitude),\(longitude)")
+        var components = URLComponents(string: "https://api.darksky.net/forecast/\(secretKey)/\(latitude),\(longitude)")
         components?.queryItems = queryItems
         return components?.url
     }

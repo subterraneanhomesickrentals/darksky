@@ -3,7 +3,7 @@
 public struct Request {
     
     /// Your Dark Sky secret key. (Your secret key must be kept secret; in particular, do not embed it in client source code.)
-    public let key: String
+    public let secretKey: String
     
     /// The latitude of a location (in decimal degrees). Positive is north, negative is south.
     public let latitude: Double
@@ -33,8 +33,8 @@ public struct Request {
         case flags
     }
     
-    public init(key: String, latitude: Double, longitude: Double, exclude: Set<ExcludableResponseData>? = nil, extend: Bool? = nil, language: Language? = nil, units: Units? = nil) {
-        self.key = key
+    public init(secretKey: String, latitude: Double, longitude: Double, exclude: Set<ExcludableResponseData>? = nil, extend: Bool? = nil, language: Language? = nil, units: Units? = nil) {
+        self.secretKey = secretKey
         self.latitude = latitude
         self.longitude = longitude
         self.exclude = exclude
