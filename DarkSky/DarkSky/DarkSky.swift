@@ -6,7 +6,15 @@ public enum DarkSky {
     
     public enum Result {
         case success(Response)
-        case failure(Error?)
+        case failure(Error)
+    }
+    
+    public enum DarkSkyError: Error {
+        case requestFailed(Error)
+        case unexpected
+        case statusCode(HTTPURLResponse)
+        case noData
+        case jsonDecoding(Error)
     }
     
     public static func weather(secretKey: String = secretKey ?? "", latitude: Double, longitude: Double, exclude: Set<Request.ExcludableResponseData>? = nil, extend: Bool? = nil, language: Language? = nil, units: Units? = nil, completionHandler: @escaping (_ result: Result) -> Void) {
@@ -23,22 +31,16 @@ public enum DarkSky {
     }
     
     static func processTaskCompletion(data: Data?, response: URLResponse?, error: Error?) throws -> Response {
-        guard error == nil else {
-            throw error!
-        }
-        guard let response = response as? HTTPURLResponse else {
-            throw NSError()
-        }
-        guard case 200..<300 = response.statusCode else {
-            throw NSError()
-        }
-        guard let data = data else {
-            throw NSError()
-        }
+        
+        guard error == nil                                else { throw DarkSkyError.requestFailed(error!) }
+        guard let response = response as? HTTPURLResponse else { throw DarkSkyError.unexpected }
+        guard case 200..<300 = response.statusCode        else { throw DarkSkyError.statusCode(response) }
+        guard let data = data                             else { throw DarkSkyError.noData }
+        
         do {
             return try JSONDecoder().decode(Response.self, from: data)
         } catch {
-            throw error
+            throw DarkSkyError.jsonDecoding(error)
         }
     }
 }
