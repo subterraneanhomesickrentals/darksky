@@ -6,7 +6,7 @@ public struct Alert: Codable {
     public let description: String
     
     /// The UNIX time at which the alert will expire.
-    public let expires: Int
+    public let expires: Date
     
     /// An array of strings representing the names of the regions covered by this weather alert.
     public let regions: [String]
@@ -15,7 +15,7 @@ public struct Alert: Codable {
     public let severity: String
     
     /// The UNIX time at which the alert was issued.
-    public let time: Int
+    public let time: Date
     
     /// A brief description of the alert.
     public let title: String

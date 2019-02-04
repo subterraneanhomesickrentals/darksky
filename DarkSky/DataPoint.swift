@@ -9,25 +9,25 @@ public struct DataPoint: Codable {
     public let apparentTemperatureHigh: Double?
     
     /// The UNIX time representing when the daytime high apparent temperature occurs.
-    public let apparentTemperatureHighTime: Int?
+    public let apparentTemperatureHighTime: Date?
     
     /// The overnight low apparent temperature.
     public let apparentTemperatureLow: Double?
     
     /// The UNIX time representing when the overnight low apparent temperature occurs.
-    public let apparentTemperatureLowTime: Int?
+    public let apparentTemperatureLowTime: Date?
     
     /// The maximum apparent temperature during a given date.
     public let apparentTemperatureMax: Double?
     
     /// The UNIX time representing when the maximum apparent temperature during a given date occurs.
-    public let apparentTemperatureMaxTime: Int?
+    public let apparentTemperatureMaxTime: Date?
     
     /// The minimum apparent temperature during a given date.
     public let apparentTemperatureMin: Double?
     
     /// The UNIX time representing when the minimum apparent temperature during a given date occurs.
-    public let apparentTemperatureMinTime: Int?
+    public let apparentTemperatureMinTime: Date?
     
     /// The percentage of sky occluded by clouds, between 0 and 1, inclusive.
     public let cloudCover: Double?
@@ -66,7 +66,7 @@ public struct DataPoint: Codable {
     public let precipIntensityMax: Double?
     
     /// The UNIX time of when precipIntensityMax occurs during a given day.
-    public let precipIntensityMaxTime: Int?
+    public let precipIntensityMaxTime: Date?
     
     /// The probability of precipitation occurring, between 0 and 1, inclusive.
     public let precipProbability: Double?
@@ -81,10 +81,10 @@ public struct DataPoint: Codable {
     public let summary: String?
     
     /// The UNIX time of when the sun will rise during a given day.
-    public let sunriseTime: Int?
+    public let sunriseTime: Date?
     
     /// The UNIX time of when the sun will set during a given day.
-    public let sunsetTime: Int?
+    public let sunsetTime: Date?
     
     /// The air temperature in degrees Fahrenheit.
     public let temperature: Double?
@@ -93,34 +93,34 @@ public struct DataPoint: Codable {
     public let temperatureHigh: Double?
     
     /// The UNIX time representing when the daytime high temperature occurs.
-    public let temperatureHighTime: Int?
+    public let temperatureHighTime: Date?
     
     /// The overnight low temperature.
     public let temperatureLow: Double?
     
     /// The UNIX time representing when the overnight low temperature occurs.
-    public let temperatureLowTime: Int?
+    public let temperatureLowTime: Date?
     
     /// The maximum temperature during a given date.
     public let temperatureMax: Double?
     
     /// The UNIX time representing when the maximum temperature during a given date occurs.
-    public let temperatureMaxTime: Int?
+    public let temperatureMaxTime: Date?
     
     /// The minimum temperature during a given date.
     public let temperatureMin: Double?
     
     /// The UNIX time representing when the minimum temperature during a given date occurs.
-    public let temperatureMinTime: Int?
+    public let temperatureMinTime: Date?
     
     /// The UNIX time at which this data point begins. minutely data point are always aligned to the top of the minute, hourly data point objects to the top of the hour, and daily data point objects to midnight of the day, all according to the local time zone.
-    public let time: Int
+    public let time: Date
     
     /// The UV index.
     public let uvIndex: Int?
     
     /// The UNIX time of when the maximum uvIndex occurs during a given day.
-    public let uvIndexTime: Int?
+    public let uvIndexTime: Date?
     
     /// The average visibility in miles, capped at 10 miles.
     public let visibility: Double?
@@ -132,7 +132,7 @@ public struct DataPoint: Codable {
     public let windGust: Double?
     
     /// The time at which the maximum wind gust speed occurs during the day.
-    public let windGustTime: Int?
+    public let windGustTime: Date?
     
     /// The wind speed in miles per hour.
     public let windSpeed: Double?
