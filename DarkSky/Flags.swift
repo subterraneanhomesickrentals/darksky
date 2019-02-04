@@ -12,7 +12,7 @@ public struct Flags: Codable {
     public let sources: [String]
     
     /// Indicates the units which were used for the data in this request.
-    public let units: String
+    public let units: Units
     
     enum CodingKeys: String, CodingKey {
         case darkskyunavailable = "darksky-unavailable"

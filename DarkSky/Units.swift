@@ -1,6 +1,6 @@
 
 /// Units of measurement.
-public enum Units: String {
+public enum Units: String, Codable {
     
     /// Automatically select units based on geographic location.
     case auto = "auto"
