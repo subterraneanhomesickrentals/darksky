@@ -21,5 +21,5 @@ public struct Alert: Codable {
     public let title: String
     
     /// An HTTP(S) URI that one may refer to for detailed information about the alert.
-    public let uri: String
+    public let uri: URL
 }
