@@ -5,7 +5,7 @@ public enum DarkSky {
     public static var secretKey: String?
     
     public enum Result {
-        case success(Response)
+        case success(Weather)
         case failure(Error)
     }
     
@@ -30,7 +30,7 @@ public enum DarkSky {
         task.resume()
     }
     
-    static func processTaskCompletion(data: Data?, response: URLResponse?, error: Error?) throws -> Response {
+    static func processTaskCompletion(data: Data?, response: URLResponse?, error: Error?) throws -> Weather {
         
         guard error == nil                                else { throw DarkSkyError.requestFailed(error!) }
         guard let response = response as? HTTPURLResponse else { throw DarkSkyError.unexpected }
@@ -40,7 +40,7 @@ public enum DarkSky {
         do {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .secondsSince1970
-            return try decoder.decode(Response.self, from: data)
+            return try decoder.decode(Weather.self, from: data)
         } catch {
             throw DarkSkyError.jsonDecoding(error)
         }

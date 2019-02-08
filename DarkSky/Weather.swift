@@ -1,6 +1,6 @@
 
 /// The API response.
-public struct Response: Codable {
+public struct Weather: Codable {
     
     /// The requested latitude.
     public let latitude: Double
