@@ -6,7 +6,7 @@ public struct Alert: Codable {
     public let description: String
     
     /// The UNIX time at which the alert will expire.
-    public let expires: Date
+    public let expirationTime: Date
     
     /// An array of strings representing the names of the regions covered by this weather alert.
     public let regions: [String]
@@ -34,5 +34,15 @@ public struct Alert: Codable {
         
         /// An individual should take immediate action to protect themselves and others from potentially severe weather.
         case warning
+    }
+    
+    public enum CodingKeys: String, CodingKey {
+        case description
+        case expirationTime = "expires"
+        case regions
+        case severity
+        case time
+        case title
+        case uri
     }
 }

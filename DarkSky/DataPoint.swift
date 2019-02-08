@@ -54,25 +54,25 @@ public struct DataPoint: Codable {
     public let ozone: Double?
     
     /// The amount of snowfall accumulation expected to occur, in inches. (If no snowfall is expected, this property will not be defined.)
-    public let precipAccumulation: Double?
+    public let precipitationAccumulation: Double?
     
     /// The intensity (in inches of liquid water per hour) of precipitation occurring at the given time. This value is conditional on probability (that is, assuming any precipitation occurs at all).
-    public let precipIntensity: Double?
+    public let precipitationIntensity: Double?
     
     /// The standard deviation of the distribution of precipIntensity. (We only return this property when the full distribution, and not merely the expected mean, can be estimated with accuracy.)
-    public let precipIntensityError: Double?
+    public let precipitationIntensityError: Double?
     
     /// The maximum value of precipIntensity during a given day.
-    public let precipIntensityMax: Double?
+    public let precipitationIntensityMax: Double?
     
     /// The UNIX time of when precipIntensityMax occurs during a given day.
-    public let precipIntensityMaxTime: Date?
+    public let precipitationIntensityMaxTime: Date?
     
     /// The probability of precipitation occurring, between 0 and 1, inclusive.
-    public let precipProbability: Double?
+    public let precipitationProbability: Double?
     
     /// The type of precipitation occurring at the given time. If defined, this property will have one of the following values: "rain", "snow", or "sleet" (which refers to each of freezing rain, ice pellets, and “wintery mix”). (If precipIntensity is zero, then this property will not be defined. Additionally, due to the lack of data in our sources, historical precipType information is usually estimated, rather than observed.)
-    public let precipType: String?
+    public let precipitationType: String?
     
     /// The sea-level air pressure in millibars.
     public let pressure: Double?
@@ -120,7 +120,7 @@ public struct DataPoint: Codable {
     public let uvIndex: Int?
     
     /// The UNIX time of when the maximum uvIndex occurs during a given day.
-    public let uvIndexTime: Date?
+    public let uvIndexMaxTime: Date?
     
     /// The average visibility in miles, capped at 10 miles.
     public let visibility: Double?
@@ -132,8 +132,57 @@ public struct DataPoint: Codable {
     public let windGust: Double?
     
     /// The time at which the maximum wind gust speed occurs during the day.
-    public let windGustTime: Date?
+    public let windGustMaxTime: Date?
     
     /// The wind speed in miles per hour.
     public let windSpeed: Double?
+    
+    
+    public enum CodingKeys: String, CodingKey {
+        case apparentTemperature
+        case apparentTemperatureHigh
+        case apparentTemperatureHighTime
+        case apparentTemperatureLow
+        case apparentTemperatureLowTime
+        case apparentTemperatureMax
+        case apparentTemperatureMaxTime
+        case apparentTemperatureMin
+        case apparentTemperatureMinTime
+        case cloudCover
+        case dewPoint
+        case humidity
+        case icon
+        case moonPhase
+        case nearestStormBearing
+        case nearestStormDistance
+        case ozone
+        case precipitationAccumulation     = "precipAccumulation"
+        case precipitationIntensity        = "precipIntensity"
+        case precipitationIntensityError   = "precipIntensityError"
+        case precipitationIntensityMax     = "precipIntensityMax"
+        case precipitationIntensityMaxTime = "precipIntensityMaxTime"
+        case precipitationProbability      = "precipProbability"
+        case precipitationType             = "precipType"
+        case pressure
+        case summary
+        case sunriseTime
+        case sunsetTime
+        case temperature
+        case temperatureHigh
+        case temperatureHighTime
+        case temperatureLow
+        case temperatureLowTime
+        case temperatureMax
+        case temperatureMaxTime
+        case temperatureMin
+        case temperatureMinTime
+        case time
+        case uvIndex
+        case uvIndexMaxTime                = "uvIndexTime"
+        case visibility
+        case windBearing
+        case windGust
+        case windGustMaxTime               = "windGustTime"
+        case windSpeed
+    }
 }

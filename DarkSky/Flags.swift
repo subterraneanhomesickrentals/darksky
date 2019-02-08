@@ -3,10 +3,10 @@
 public struct Flags: Codable {
     
     /// The presence of this property indicates that the Dark Sky data source supports the given location, but a temporary error (such as a radar station being down for maintenance) has made the data unavailable.
-    public let darkskyunavailable: Bool?
+    public let isDarkSkyUnavailable: Bool?
     
     /// The distance to the nearest weather station that contributed data to this response. Note, however, that many other stations may have also been used; this value is primarily for debugging purposes. This property's value is in miles (if US units are selected) or kilometers (if SI units are selected).
-    public let neareststation: Double
+    public let nearestStation: Double
     
     /// This property contains an array of IDs for each data source utilized in servicing this request.
     public let sources: [String]
@@ -15,8 +15,8 @@ public struct Flags: Codable {
     public let units: Units
     
     enum CodingKeys: String, CodingKey {
-        case darkskyunavailable = "darksky-unavailable"
-        case neareststation = "nearest-station"
+        case isDarkSkyUnavailable = "darksky-unavailable"
+        case nearestStation       = "nearest-station"
         case sources
         case units
     }
