@@ -15,16 +15,16 @@ public struct Weather: Codable {
     public let timeZoneOffset: Int?
     
     /// A data point containing the current weather conditions at the requested location.
-    public let currently: DataPoint?
+    public let currently: Instant?
     
     /// A data block containing the weather conditions minute-by-minute for the next hour.
-    public let minutely: DataBlock?
+    public let minutely: DataBlock<Minute>?
     
     /// A data block containing the weather conditions hour-by-hour for the next two days.
-    public let hourly: DataBlock?
+    public let hourly: DataBlock<Hour>?
     
     /// A data block containing the weather conditions day-by-day for the next week.
-    public let daily: DataBlock?
+    public let daily: DataBlock<Day>?
     
     /// An alerts array, which, if present, contains any severe weather alerts pertinent to the requested location.
     public let alerts: [Alert]?

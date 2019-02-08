@@ -1,9 +1,9 @@
 
 /// A data block object represents the various weather phenomena occurring over a period of time.
-public struct DataBlock: Codable {
+public struct DataBlock<T: Codable>: Codable {
     
     /// An array of data points, ordered by time, which together describe the weather conditions at the requested location over time.
-    public let data: [DataPoint]
+    public let data: [T]
     
     /// A human-readable summary of this data block.
     public let summary: String?
