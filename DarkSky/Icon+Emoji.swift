@@ -1,6 +1,6 @@
 
 extension Icon {
-    var emoji: String {
+    public var emoji: String {
         switch self {
         case .clearDay:          return "🌞"
         case .clearNight:        return "🌜"
