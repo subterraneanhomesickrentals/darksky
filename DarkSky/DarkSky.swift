@@ -68,9 +68,7 @@ public enum DarkSky {
         guard let data = data                             else { throw DarkSkyError.noData }
         
         do {
-            let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = .secondsSince1970
-            return try decoder.decode(Weather.self, from: data)
+            return try Weather.jsonDecoder.decode(Weather.self, from: data)
         } catch {
             throw DarkSkyError.jsonDecoding(error)
         }

@@ -44,4 +44,10 @@ public struct Weather: Codable {
         case alerts
         case flags
     }
+    
+    public private(set) static var jsonDecoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        return decoder
+    }()
 }
