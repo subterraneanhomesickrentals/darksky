@@ -15,10 +15,10 @@ extension Request {
     /// - Returns: The `URL` initialized using the parameters of `self`.
     /// - Throws: A `DarkSkyError.invalidURL` instance if initialization of a valid `URL` fails. A `DarkSkyError.noSecretKeyProvided` instance if an empty string is provided for `secretKey`.
     public func asURL() throws -> URL {
-        guard secretKey != "" else { throw DS.DarkSkyError.noSecretKeyProvided }
-        guard var components = URLComponents(string: "https://api.darksky.net/forecast/\(secretKey)/\(latitude),\(longitude)") else { throw DS.DarkSkyError.invalidURL }
+        guard secretKey != "" else { throw DarkSkyError.noSecretKeyProvided }
+        guard var components = URLComponents(string: "https://api.darksky.net/forecast/\(secretKey)/\(latitude),\(longitude)") else { throw DarkSkyError.invalidURL }
         components.queryItems = queryItems
-        guard let url = components.url else { throw DS.DarkSkyError.invalidURL }
+        guard let url = components.url else { throw DarkSkyError.invalidURL }
         return url
     }
     

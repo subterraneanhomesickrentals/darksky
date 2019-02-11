@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A010E982211F26300C4059E /* DarkSkyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A010E972211F26300C4059E /* DarkSkyError.swift */; };
 		4A0D6A2A2203478F004F6AAA /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D6A292203478F004F6AAA /* Icon.swift */; };
 		4ACE829022037D6E007DA0C7 /* DarkSky.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE828F22037D6E007DA0C7 /* DarkSky.swift */; };
 		4AD23494220E14E600733E32 /* Hour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD23491220E14E500733E32 /* Hour.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A010E972211F26300C4059E /* DarkSkyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSkyError.swift; sourceTree = "<group>"; };
 		4A0D6A292203478F004F6AAA /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		4ACE828F22037D6E007DA0C7 /* DarkSky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSky.swift; sourceTree = "<group>"; };
 		4AD23491220E14E500733E32 /* Hour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hour.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				F4455BD922024E900078D526 /* DarkSky.h */,
 				F4455BDA22024E900078D526 /* Info.plist */,
 				4ACE828F22037D6E007DA0C7 /* DarkSky.swift */,
+				4A010E972211F26300C4059E /* DarkSkyError.swift */,
 				F4C699E32202A84D006A685C /* Request.swift */,
 				F4C699E52202AAD2006A685C /* Request+URL.swift */,
 				F4C699E12202A794006A685C /* Language.swift */,
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A010E982211F26300C4059E /* DarkSkyError.swift in Sources */,
 				4AD23495220E14E600733E32 /* Day.swift in Sources */,
 				4ACE829022037D6E007DA0C7 /* DarkSky.swift in Sources */,
 				F4C699E02202A706006A685C /* Units.swift in Sources */,
