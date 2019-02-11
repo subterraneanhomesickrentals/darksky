@@ -1,6 +1,15 @@
 
 extension Request {
     
+    /// Returns a `URLRequest` if the parameters of `self` can be used to initialize a valid `URL` instance, otherwise throws.
+    ///
+    /// - Returns: The `URLRequest` initialized using the parameters of `self`.
+    /// - Throws: A `DarkSkyError.invalidURL` instance if initialization of a valid `URL` fails. A `DarkSkyError.noSecretKeyProvided` instance if an empty string is provided for `secretKey`.
+    public func asURLRequest() throws -> URLRequest {
+        let url = try asURL()
+        return URLRequest(url: url)
+    }
+    
     /// Returns a `URL` if the parameters of `self` can be used to initialize a valid `URL` instance, otherwise throws.
     ///
     /// - Returns: The `URL` initialized using the parameters of `self`.
