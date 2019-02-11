@@ -1,11 +1,16 @@
 
 extension Request {
     
-    /// The fully formed request URL, including the HTTP query string.
-    public var url: URL? {
-        var components = URLComponents(string: "https://api.darksky.net/forecast/\(secretKey)/\(latitude),\(longitude)")
-        components?.queryItems = queryItems
-        return components?.url
+    /// Returns a `URL` if the parameters of `self` can be used to initialize a valid `URL` instance, otherwise throws.
+    ///
+    /// - Returns: The `URL` initialized using the parameters of `self`.
+    /// - Throws: A `DarkSkyError.invalidURL` instance if initialization of a valid `URL` fails. A `DarkSkyError.noSecretKeyProvided` instance if an empty string is provided for `secretKey`.
+    public func asURL() throws -> URL {
+        guard secretKey != "" else { throw DS.DarkSkyError.noSecretKeyProvided }
+        guard var components = URLComponents(string: "https://api.darksky.net/forecast/\(secretKey)/\(latitude),\(longitude)") else { throw DS.DarkSkyError.invalidURL }
+        components.queryItems = queryItems
+        guard let url = components.url else { throw DS.DarkSkyError.invalidURL }
+        return url
     }
     
     var queryItems: [URLQueryItem]? {
