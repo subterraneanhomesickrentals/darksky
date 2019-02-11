@@ -12,6 +12,9 @@ public enum DarkSky {
     /// These are various errors which may occur when fetching or parsing weather data from the Dark Sky API.
     public enum DarkSkyError: Error {
         
+        /// The request to fetch the weather was not initiated because no secret key was provided. Please provide a Dark Sky API Secret Key via `DarkSky.secretKey`, or via the `secretKey` parameter of the `DarkSky.weather()` method.
+        case noSecretKeyProvided
+        
         /// The URL request to fetch the weather failed.
         case requestFailed(Error)
         
@@ -31,7 +34,14 @@ public enum DarkSky {
     private static var session = URLSession(configuration: .default, delegate: nil, delegateQueue: .main)
     
     public static func weather(secretKey: String = secretKey ?? "", latitude: Double, longitude: Double, exclude: Set<Request.ExcludableResponseData>? = nil, extend: Bool? = nil, language: Language? = nil, units: Units? = nil, completionHandler: @escaping (_ result: Result) -> Void) {
+        
+        guard secretKey != "" else {
+            completionHandler(.failure(DarkSkyError.noSecretKeyProvided))
+            return
+        }
+        
         let request = Request(secretKey: secretKey, latitude: latitude, longitude: longitude, exclude: exclude, extend: extend, language: language, units: units)
+        
         let task = session.dataTask(with: request.url!) { (data: Data?, response: URLResponse?, error: Error?) in
             do {
                 let response = try processTaskCompletion(data: data, response: response, error: error)
@@ -40,6 +50,7 @@ public enum DarkSky {
                 completionHandler(.failure(error))
             }
         }
+        
         task.resume()
     }
     
