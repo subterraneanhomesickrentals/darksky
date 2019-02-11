@@ -9,11 +9,22 @@ public enum DarkSky {
         case failure(Error)
     }
     
+    /// These are various errors which may occur when fetching or parsing weather data from the Dark Sky API.
     public enum DarkSkyError: Error {
+        
+        /// The URL request to fetch the weather failed.
         case requestFailed(Error)
+        
+        /// An unexpected error occured when processing the HTTP response from the server.
         case unexpected
+        
+        /// The request completed, but the HTTP status code indicates an error.
         case statusCode(HTTPURLResponse)
+        
+        /// The API responded, but did not provide any data.
         case noData
+        
+        /// The request completed successfully, but an error occurred when decoding the data as JSON.
         case jsonDecoding(Error)
     }
     
