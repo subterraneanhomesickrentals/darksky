@@ -1,5 +1,6 @@
 
-public enum DarkSky {
+/// Global namespace containing helper methods for fetching weather data from the Dark Sky API.
+public enum 🌩 {
     
     /// Your Dark Sky secret key. (Your secret key must be kept secret; in particular, do not embed it in client source code.)
     public static var secretKey: String?

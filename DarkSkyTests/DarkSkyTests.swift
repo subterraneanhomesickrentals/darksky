@@ -8,16 +8,16 @@ class DarkSkyTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        DarkSky.secretKey = DarkSkyTests.secretKey
+        🌩.secretKey = DarkSkyTests.secretKey
     }
     
     func testFetchingWeather() {
         
-        var fetchResult: DarkSky.Result?
+        var fetchResult: 🌩.Result?
         
         let expectationa = expectation(description: "testFetchingWeather")
         
-        DarkSky.weather(latitude: 28.608276, longitude: -80.604097) { result in
+        🌩.weather(latitude: 28.608276, longitude: -80.604097) { result in
             fetchResult = result
             expectationa.fulfill()
         }
