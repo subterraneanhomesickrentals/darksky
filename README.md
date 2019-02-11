@@ -15,6 +15,19 @@ Not supported.
 
 ## Usage
 
+### 🌩
+
+```swift
+🌩.secretKey = "<#Your Dark Sky API Secret Key#>"
+
+🌩.weather(latitude: 28.608276, longitude: -80.604097) { result in
+    switch result {
+    case .success(let weather): print(weather.currently?.temperature)
+    case .failure(let error):   print(error)
+    }
+}
+```
+
 ### Alamofire
 
 To use DarkSky with Alamofire, extend `DarkSky.Request` to conform to Alamofire's `URLConvertible` protocol, then simply use `AF.request()` as usual:
