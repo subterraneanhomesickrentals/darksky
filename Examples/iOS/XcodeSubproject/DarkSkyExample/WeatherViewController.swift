@@ -18,7 +18,7 @@ class WeatherViewController: UIViewController {
             case .success(let weather):
                 self.label?.text = String(format: "%.0f", weather.currently?.temperature ?? 0) + " \(weather.currently?.icon?.emoji ?? "🤷‍♂️")"
             case .failure(let error):
-                self.label?.text = error.localizedDescription
+                self.label?.text = "\(error)"
             }
         }
     }
