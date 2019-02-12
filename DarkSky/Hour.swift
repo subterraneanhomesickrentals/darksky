@@ -33,7 +33,7 @@ public struct Hour: Codable {
     public let precipitationProbability: Double?
     
     /// The type of precipitation occurring at the given time. If defined, this property will have one of the following values: "rain", "snow", or "sleet" (which refers to each of freezing rain, ice pellets, and “wintery mix”). (If precipIntensity is zero, then this property will not be defined. Additionally, due to the lack of data in our sources, historical precipType information is usually estimated, rather than observed.)
-    public let precipitationType: String?
+    public let precipitationType: PrecipitationType?
     
     /// The sea-level air pressure in millibars.
     public let pressure: Double?

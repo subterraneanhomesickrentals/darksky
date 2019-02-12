@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4A010E982211F26300C4059E /* DarkSkyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A010E972211F26300C4059E /* DarkSkyError.swift */; };
 		4A0D6A2A2203478F004F6AAA /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D6A292203478F004F6AAA /* Icon.swift */; };
+		4A100616221325AC0096F243 /* PrecipitationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A100615221325AC0096F243 /* PrecipitationType.swift */; };
 		4ACE829022037D6E007DA0C7 /* DarkSky.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE828F22037D6E007DA0C7 /* DarkSky.swift */; };
 		4AD23494220E14E600733E32 /* Hour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD23491220E14E500733E32 /* Hour.swift */; };
 		4AD23495220E14E600733E32 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD23492220E14E600733E32 /* Day.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		4A010E972211F26300C4059E /* DarkSkyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSkyError.swift; sourceTree = "<group>"; };
 		4A0D6A292203478F004F6AAA /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		4A100615221325AC0096F243 /* PrecipitationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecipitationType.swift; sourceTree = "<group>"; };
 		4ACE828F22037D6E007DA0C7 /* DarkSky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSky.swift; sourceTree = "<group>"; };
 		4AD23491220E14E500733E32 /* Hour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hour.swift; sourceTree = "<group>"; };
 		4AD23492220E14E600733E32 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				4AD23491220E14E500733E32 /* Hour.swift */,
 				4AD23493220E14E600733E32 /* Minute.swift */,
 				4AD23497220E169700733E32 /* Instant.swift */,
+				4A100615221325AC0096F243 /* PrecipitationType.swift */,
 			);
 			path = DarkSky;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				4AD23496220E14E600733E32 /* Minute.swift in Sources */,
 				F4C699E82202B896006A685C /* Weather.swift in Sources */,
 				F4C699F02202C002006A685C /* Flags.swift in Sources */,
+				4A100616221325AC0096F243 /* PrecipitationType.swift in Sources */,
 				F4C699EE2202BF7F006A685C /* Alert.swift in Sources */,
 				4AD23498220E169700733E32 /* Instant.swift in Sources */,
 				4A0D6A2A2203478F004F6AAA /* Icon.swift in Sources */,
