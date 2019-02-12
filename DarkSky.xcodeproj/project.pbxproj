@@ -26,6 +26,9 @@
 		F4C699EC2202BEB8006A685C /* DataBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699EB2202BEB8006A685C /* DataBlock.swift */; };
 		F4C699EE2202BF7F006A685C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699ED2202BF7F006A685C /* Alert.swift */; };
 		F4C699F02202C002006A685C /* Flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699EF2202C002006A685C /* Flags.swift */; };
+		F4E981B82212765900523AF8 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E981B72212765900523AF8 /* City.swift */; };
+		F4E981BA2212769400523AF8 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E981B92212769400523AF8 /* Coordinates.swift */; };
+		F4E981BC221276BA00523AF8 /* City+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E981BB221276B900523AF8 /* City+Coordinates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		F4C699EB2202BEB8006A685C /* DataBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBlock.swift; sourceTree = "<group>"; };
 		F4C699ED2202BF7F006A685C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		F4C699EF2202C002006A685C /* Flags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flags.swift; sourceTree = "<group>"; };
+		F4E981B72212765900523AF8 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		F4E981B92212769400523AF8 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		F4E981BB221276B900523AF8 /* City+Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+Coordinates.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +136,9 @@
 			children = (
 				F4455BE422024E900078D526 /* DarkSkyTests.swift */,
 				F4455BE622024E900078D526 /* Info.plist */,
+				F4E981B72212765900523AF8 /* City.swift */,
+				F4E981B92212769400523AF8 /* Coordinates.swift */,
+				F4E981BB221276B900523AF8 /* City+Coordinates.swift */,
 			);
 			path = DarkSkyTests;
 			sourceTree = "<group>";
@@ -266,6 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4E981BC221276BA00523AF8 /* City+Coordinates.swift in Sources */,
+				F4E981BA2212769400523AF8 /* Coordinates.swift in Sources */,
+				F4E981B82212765900523AF8 /* City.swift in Sources */,
 				F4455BE522024E900078D526 /* DarkSkyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -143,13 +143,13 @@ class DarkSkyTests: XCTestCase {
         case requestFailed(Error)
     }
     
-    func performWeatherRequest(exclude: Set<Request.ExcludableResponseData>) throws -> Weather {
+    func performWeatherRequest(latitude: Double = 28.608276, longitude: Double = -80.604097, exclude: Set<Request.ExcludableResponseData>? = nil) throws -> Weather {
         
         var fetchResult: 🌩.Result?
         
         let e = expectation(description: "Weather Request")
         
-        🌩.weather(latitude: 28.608276, longitude: -80.604097, exclude: exclude) { result in
+        🌩.weather(latitude: latitude, longitude: longitude, exclude: exclude) { result in
             fetchResult = result
             e.fulfill()
         }
@@ -165,6 +165,21 @@ class DarkSkyTests: XCTestCase {
             throw FetchError.requestFailed(error)
         case .success(let weather):
             return weather
+        }
+    }
+    
+    func testAllCities() {
+        City.allCases.forEach {
+            do {
+                let weather = try performWeatherRequest(latitude: $0.coordinates.latitude, longitude: $0.coordinates.longitude)
+                XCTAssertNotNil(weather.currently)
+                XCTAssertNotNil(weather.minutely)
+                XCTAssertNotNil(weather.hourly)
+                XCTAssertNotNil(weather.daily)
+                XCTAssertNotNil(weather.flags)
+            } catch {
+                XCTFail("City: \($0) failed with error: \(error)")
+            }
         }
     }
 }
