@@ -12,7 +12,7 @@ public struct Weather: Codable {
     public let timeZone: String
     
     /// DEPRECATED. The current timezone offset in hours. (Use of this property will almost certainly result in Daylight Saving Time bugs. Please use timezone, instead.)
-    public let timeZoneOffset: Int?
+    public let timeZoneOffset: Double?
     
     /// A data point containing the current weather conditions at the requested location.
     public let currently: Instant?
