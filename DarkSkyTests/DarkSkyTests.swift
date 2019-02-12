@@ -182,4 +182,21 @@ class DarkSkyTests: XCTestCase {
             }
         }
     }
+    
+    func testRandomly() {
+        for _ in 1...500 {
+            let latitude = Double.random(in: -90...90)
+            let longitude = Double.random(in: -180...180)
+            do {
+                print("Fetching weather at random latitude: \(latitude) longitude: \(longitude)")
+                let weather = try performWeatherRequest(latitude: latitude, longitude: longitude)
+                XCTAssertNotNil(weather.currently)
+                XCTAssertNotNil(weather.hourly)
+                XCTAssertNotNil(weather.daily)
+                XCTAssertNotNil(weather.flags)
+            } catch {
+                XCTFail("Failed with error: \(error)")
+            }
+        }
+    }
 }
