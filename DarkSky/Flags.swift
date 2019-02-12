@@ -6,7 +6,8 @@ public struct Flags: Codable {
     public let isDarkSkyUnavailable: Bool?
     
     /// The distance to the nearest weather station that contributed data to this response. Note, however, that many other stations may have also been used; this value is primarily for debugging purposes. This property's value is in miles (if US units are selected) or kilometers (if SI units are selected).
-    public let nearestStation: Double
+    /// - Attention: Although the official Dark Sky API Documentation lists this property as "required", in practice it can be nil, and therefore it is an `Optional`.
+    public let nearestStation: Double?
     
     /// This property contains an array of IDs for each data source utilized in servicing this request.
     public let sources: [String]
