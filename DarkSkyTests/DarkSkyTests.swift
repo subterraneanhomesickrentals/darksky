@@ -31,4 +31,140 @@ class DarkSkyTests: XCTestCase {
             break
         }
     }
+    
+    func testExcludableCurrently() {
+        do {
+            let weather = try performWeatherRequest(exclude: [.currently])
+            XCTAssertNil(weather.currently)
+            XCTAssertNotNil(weather.minutely)
+            XCTAssertNotNil(weather.hourly)
+            XCTAssertNotNil(weather.daily)
+            XCTAssertNotNil(weather.flags)
+        } catch {
+            XCTFail("Failed with error: \(error)")
+        }
+    }
+    
+    func testExcludableMinutely() {
+        do {
+            let weather = try performWeatherRequest(exclude: [.minutely])
+            XCTAssertNotNil(weather.currently)
+            XCTAssertNil(weather.minutely)
+            XCTAssertNotNil(weather.hourly)
+            XCTAssertNotNil(weather.daily)
+            XCTAssertNotNil(weather.flags)
+        } catch {
+            XCTFail("Failed with error: \(error)")
+        }
+    }
+    
+    func testExcludableHourly() {
+        do {
+            let weather = try performWeatherRequest(exclude: [.hourly])
+            XCTAssertNotNil(weather.currently)
+            XCTAssertNotNil(weather.minutely)
+            XCTAssertNil(weather.hourly)
+            XCTAssertNotNil(weather.daily)
+            XCTAssertNotNil(weather.flags)
+        } catch {
+            XCTFail("Failed with error: \(error)")
+        }
+    }
+    
+    func testExcludableDaily() {
+        do {
+            let weather = try performWeatherRequest(exclude: [.daily])
+            XCTAssertNotNil(weather.currently)
+            XCTAssertNotNil(weather.minutely)
+            XCTAssertNotNil(weather.hourly)
+            XCTAssertNil(weather.daily)
+            XCTAssertNotNil(weather.flags)
+        } catch {
+            XCTFail("Failed with error: \(error)")
+        }
+    }
+    
+    func testExcludableAlerts() {
+        do {
+            let weather = try performWeatherRequest(exclude: [.alerts])
+            XCTAssertNotNil(weather.currently)
+            XCTAssertNotNil(weather.minutely)
+            XCTAssertNotNil(weather.hourly)
+            XCTAssertNotNil(weather.daily)
+            XCTAssertNil(weather.alerts)
+            XCTAssertNotNil(weather.flags)
+        } catch {
+            XCTFail("Failed with error: \(error)")
+        }
+    }
+    
+    func testExcludableFlags() {
+        do {
+            let weather = try performWeatherRequest(exclude: [.flags])
+            XCTAssertNotNil(weather.currently)
+            XCTAssertNotNil(weather.minutely)
+            XCTAssertNotNil(weather.hourly)
+            XCTAssertNotNil(weather.daily)
+            XCTAssertNil(weather.flags)
+        } catch {
+            XCTFail("Failed with error: \(error)")
+        }
+    }
+    
+    func testExcludableEverything() {
+        do {
+            let weather = try performWeatherRequest(exclude: [.currently, .minutely, .hourly, .daily, .alerts, .flags])
+            XCTAssertNil(weather.currently)
+            XCTAssertNil(weather.minutely)
+            XCTAssertNil(weather.hourly)
+            XCTAssertNil(weather.daily)
+            XCTAssertNil(weather.alerts)
+            XCTAssertNil(weather.flags)
+        } catch {
+            XCTFail("Failed with error: \(error)")
+        }
+    }
+    
+    func testExcludableNothing() {
+        do {
+            let weather = try performWeatherRequest(exclude: [])
+            XCTAssertNotNil(weather.currently)
+            XCTAssertNotNil(weather.minutely)
+            XCTAssertNotNil(weather.hourly)
+            XCTAssertNotNil(weather.daily)
+            XCTAssertNotNil(weather.flags)
+        } catch {
+            XCTFail("Failed with error: \(error)")
+        }
+    }
+    
+    enum FetchError: Error {
+        case timeout
+        case requestFailed(Error)
+    }
+    
+    func performWeatherRequest(exclude: Set<Request.ExcludableResponseData>) throws -> Weather {
+        
+        var fetchResult: 🌩.Result?
+        
+        let e = expectation(description: "Weather Request")
+        
+        🌩.weather(latitude: 28.608276, longitude: -80.604097, exclude: exclude) { result in
+            fetchResult = result
+            e.fulfill()
+        }
+        
+        waitForExpectations(timeout: 60.0)
+        
+        guard let result = fetchResult else {
+            throw FetchError.timeout
+        }
+        
+        switch result {
+        case .failure(let error):
+            throw FetchError.requestFailed(error)
+        case .success(let weather):
+            return weather
+        }
+    }
 }
