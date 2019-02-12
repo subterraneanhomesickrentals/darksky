@@ -15,11 +15,11 @@ class DarkSkyTests: XCTestCase {
         
         var fetchResult: 🌩.Result?
         
-        let expectationa = expectation(description: "testFetchingWeather")
+        let e = expectation(description: "testFetchingWeather")
         
         🌩.weather(latitude: 28.608276, longitude: -80.604097) { result in
             fetchResult = result
-            expectationa.fulfill()
+            e.fulfill()
         }
         
         waitForExpectations(timeout: 60)
