@@ -1,4 +1,6 @@
 
+import Foundation
+
 /// A data point object contains various properties, each representing the average (unless otherwise specified) of a particular weather phenomenon occurring during a period of time: an instant in the case of currently, a minute for minutely, an hour for hourly, and a day for daily.
 public struct Instant: Codable {
     

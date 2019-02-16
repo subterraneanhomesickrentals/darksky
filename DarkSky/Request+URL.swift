@@ -1,4 +1,6 @@
 
+import Foundation
+
 extension Request {
     
     /// Returns a `URLRequest` if the parameters of `self` can be used to initialize a valid `URL` instance, otherwise throws.

@@ -1,4 +1,6 @@
 
+import Foundation
+
 /// The API response.
 public struct Weather: Codable {
     

@@ -1,4 +1,6 @@
 
+import Foundation
+
 /// These are various errors which may occur when fetching or parsing weather data from the Dark Sky API.
 public enum DarkSkyError: Error {
     

@@ -1,4 +1,6 @@
 
+import Foundation
+
 /// The alerts array contains objects representing the severe weather warnings issued for the requested location by a governmental authority.
 public struct Alert: Codable {
     

@@ -1,4 +1,6 @@
 
+import Foundation
+
 /// Global namespace containing helper methods for fetching weather data from the Dark Sky API.
 public enum 🌩 {
     
