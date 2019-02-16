@@ -2,4 +2,8 @@
 
 import PackageDescription
 
-let package = Package(name: "DarkSky", targets: [.target(name: "DarkSky", path: "DarkSky")])
+let package = Package(
+    name: "DarkSky",
+    products: [.library(name: "DarkSky", targets: ["DarkSky"])],
+    targets: [.target(name: "DarkSky", path: "DarkSky")]
+)
