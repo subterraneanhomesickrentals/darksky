@@ -52,6 +52,7 @@
 		4AD23493220E14E600733E32 /* Minute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Minute.swift; sourceTree = "<group>"; };
 		4AD23497220E169700733E32 /* Instant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instant.swift; sourceTree = "<group>"; };
 		F431AF4F2217ADDD006F0AEA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F431AF512217AE78006F0AEA /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		F4455BD622024E900078D526 /* DarkSky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DarkSky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4455BD922024E900078D526 /* DarkSky.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DarkSky.h; sourceTree = "<group>"; };
 		F4455BDA22024E900078D526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				F431AF4F2217ADDD006F0AEA /* LICENSE */,
+				F431AF512217AE78006F0AEA /* Package.swift */,
 			);
 			name = Deployment;
 			sourceTree = "<group>";
