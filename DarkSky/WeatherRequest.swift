@@ -1,6 +1,6 @@
 
 /// The API request.
-public struct Request {
+public struct WeatherRequest {
     
     /// Your Dark Sky secret key. (Your secret key must be kept secret; in particular, do not embed it in client source code.)
     public let secretKey: String

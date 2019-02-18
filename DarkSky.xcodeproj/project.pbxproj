@@ -21,8 +21,8 @@
 		F4B5958E220408D700879F8C /* Icon+Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5958D220408D700879F8C /* Icon+Emoji.swift */; };
 		F4C699E02202A706006A685C /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699DF2202A706006A685C /* Units.swift */; };
 		F4C699E22202A795006A685C /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699E12202A794006A685C /* Language.swift */; };
-		F4C699E42202A84D006A685C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699E32202A84D006A685C /* Request.swift */; };
-		F4C699E62202AAD2006A685C /* Request+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699E52202AAD2006A685C /* Request+URL.swift */; };
+		F4C699E42202A84D006A685C /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699E32202A84D006A685C /* WeatherRequest.swift */; };
+		F4C699E62202AAD2006A685C /* WeatherRequest+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699E52202AAD2006A685C /* WeatherRequest+URL.swift */; };
 		F4C699E82202B896006A685C /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699E72202B896006A685C /* Weather.swift */; };
 		F4C699EC2202BEB8006A685C /* DataBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699EB2202BEB8006A685C /* DataBlock.swift */; };
 		F4C699EE2202BF7F006A685C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C699ED2202BF7F006A685C /* Alert.swift */; };
@@ -62,8 +62,8 @@
 		F4B5958D220408D700879F8C /* Icon+Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Icon+Emoji.swift"; sourceTree = "<group>"; };
 		F4C699DF2202A706006A685C /* Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		F4C699E12202A794006A685C /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
-		F4C699E32202A84D006A685C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		F4C699E52202AAD2006A685C /* Request+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+URL.swift"; sourceTree = "<group>"; };
+		F4C699E32202A84D006A685C /* WeatherRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
+		F4C699E52202AAD2006A685C /* WeatherRequest+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherRequest+URL.swift"; sourceTree = "<group>"; };
 		F4C699E72202B896006A685C /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		F4C699EB2202BEB8006A685C /* DataBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBlock.swift; sourceTree = "<group>"; };
 		F4C699ED2202BF7F006A685C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -127,8 +127,8 @@
 				F4455BDA22024E900078D526 /* Info.plist */,
 				4ACE828F22037D6E007DA0C7 /* DarkSky.swift */,
 				4A010E972211F26300C4059E /* DarkSkyError.swift */,
-				F4C699E32202A84D006A685C /* Request.swift */,
-				F4C699E52202AAD2006A685C /* Request+URL.swift */,
+				F4C699E32202A84D006A685C /* WeatherRequest.swift */,
+				F4C699E52202AAD2006A685C /* WeatherRequest+URL.swift */,
 				F4C699E12202A794006A685C /* Language.swift */,
 				F4C699DF2202A706006A685C /* Units.swift */,
 				F4C699E72202B896006A685C /* Weather.swift */,
@@ -271,9 +271,9 @@
 				4AD23495220E14E600733E32 /* Day.swift in Sources */,
 				4ACE829022037D6E007DA0C7 /* DarkSky.swift in Sources */,
 				F4C699E02202A706006A685C /* Units.swift in Sources */,
-				F4C699E42202A84D006A685C /* Request.swift in Sources */,
+				F4C699E42202A84D006A685C /* WeatherRequest.swift in Sources */,
 				F4C699E22202A795006A685C /* Language.swift in Sources */,
-				F4C699E62202AAD2006A685C /* Request+URL.swift in Sources */,
+				F4C699E62202AAD2006A685C /* WeatherRequest+URL.swift in Sources */,
 				4AD23496220E14E600733E32 /* Minute.swift in Sources */,
 				F4C699E82202B896006A685C /* Weather.swift in Sources */,
 				F4C699F02202C002006A685C /* Flags.swift in Sources */,
