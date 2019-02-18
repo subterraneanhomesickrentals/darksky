@@ -143,7 +143,7 @@ class DarkSkyTests: XCTestCase {
         case requestFailed(Error)
     }
     
-    func performWeatherRequest(latitude: Double = 28.608276, longitude: Double = -80.604097, exclude: Set<Request.ExcludableResponseData>? = nil) throws -> Weather {
+    func performWeatherRequest(latitude: Double = 28.608276, longitude: Double = -80.604097, exclude: Set<WeatherRequest.ExcludableResponseData>? = nil) throws -> Weather {
         
         var fetchResult: 🌩.Result?
         
@@ -172,11 +172,11 @@ class DarkSkyTests: XCTestCase {
         City.allCases.forEach {
             do {
                 let weather = try performWeatherRequest(latitude: $0.coordinates.latitude, longitude: $0.coordinates.longitude)
-                XCTAssertNotNil(weather.currently)
-                XCTAssertNotNil(weather.minutely)
-                XCTAssertNotNil(weather.hourly)
-                XCTAssertNotNil(weather.daily)
-                XCTAssertNotNil(weather.flags)
+                XCTAssertNotNil(weather.currently, "\($0): currently is nil")
+                XCTAssertNotNil(weather.minutely, "\($0): minutely is nil")
+                XCTAssertNotNil(weather.hourly, "\($0): hourly is nil")
+                XCTAssertNotNil(weather.daily, "\($0): daily is nil")
+                XCTAssertNotNil(weather.flags, "\($0): flags is nil")
             } catch {
                 XCTFail("City: \($0) failed with error: \(error)")
             }
@@ -184,7 +184,7 @@ class DarkSkyTests: XCTestCase {
     }
     
     func testRandomly() {
-        for _ in 1...500 {
+        for _ in 1...50 {
             let latitude = Double.random(in: -90...90)
             let longitude = Double.random(in: -180...180)
             do {
