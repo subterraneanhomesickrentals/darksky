@@ -1,5 +1,5 @@
 
-extension Icon {
+extension Weather.Icon {
     public var emoji: String {
         switch self {
         case .clearDay:          return "☀️"
