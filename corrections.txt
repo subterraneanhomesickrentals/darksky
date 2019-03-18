@@ -1,0 +1,9 @@
+Corrections to Dark Sky API Documentation
+
+"apparentTemperature optional, only on hourly"
+apparentTemperature is also present on currently
+
+"precipAccumulation optional, only on hourly and daily"
+precipAccumulation is also present on minutely (although its meaning is not clear)
+
+"nearest-station" is listed as "required", but sometimes it is not present - therefore it should probably be listed as "optional"
